@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+@import '../../index.css';
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f2f5; /* Ajusta el fondo para que no sea tan blanco */
+  background-image: url('/src/assets/images/Login/fondoLogin.jpg'); /* Aplica la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Evita el scroll */
+  height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+  margin: 0; /* Elimina el margen por defecto */
+  color: #fff; /* Asegura que todas las letras sean blancas */
+}
+
+p {
+  color: var(--text-muted-color);
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  transition: .3s all ease;
+  text-decoration: underline; /* Se aplica a todos los enlaces */
+  color: var(--text-color);
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.login-content {
+  padding: 5rem 0; /* Reduce el padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Asegura que el contenido ocupe toda la altura del contenedor */
+}
+
+.vector-login {
+  margin-top: 0%; /* Ajusta la posición de la imagen */
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+}
+
+.contents, .bg {
+  width: 50%;
+}
+
+@media (max-width: 1199.98px) {
+  .contents, .bg {
+    width: 100%;
+  }
+}
+
+.bg {
+  background-size: cover;
+  background-position: center;
+}
+
+.formulario {
+  padding: 1rem 0; /* Reduce el padding del formulario */
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  position: absolute;
+  top: -15px; /* Ajustado para más espacio */
+  left: 10px;
+  font-size: 14px;
+  color: #000000; /* Color blanco para las letras del label */
+  padding: 0 5px;
+  background: rgb(255, 254, 254); /* Fondo semitransparente */
+  border-radius: 4px 14px 4px 14px; /* Añade border-radius */
+  transition: .3s all ease;
+  font-weight: 500; /* Peso de fuente ligeramente más fuerte */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -25px; /* Mueve la etiqueta hacia arriba cuando el input está enfocado */
+  font-size: 12px; /* Reduce el tamaño de la fuente al enfocarse */
+  color: var(--text-color); /* Color blanco al enfocarse */
+  background: rgba(255, 255, 255, 0.2); /* Mantiene el fondo semitransparente */
+}
+
+.form-group input:focus + label {
+  background: rgba(255, 255, 255, 0.2); /* Cambia el color de fondo cuando se hace clic en el label */
+}
+
+.form-group input {
+  background: transparent;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  color: var(--text-color); /* Color blanco para el texto del input */
+}
+
+.form-group.first {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.form-group.last {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.form-group.focus {
+  background: #fff;
+}
+
+.form-control {
+  border: none;
+  padding: 0;
+  font-size: 20px;
+  border-radius: 0;
+  height: 44px;
+  background: #f7f7f7;
+  border: 1px solid #dcdcdc;
+  color: var(--text-color); /* Color blanco para el texto del input */
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--primary-color);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+  background: var(--text-verde) ;
+  border-color: var(--secondary-color);
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-login a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: #f7f7f7;
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 48px;
+  color: #333;
+  font-size: 16px;
+  transition: background .3s, border-color .3s;
+}
+
+.social-login a:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+  border-radius: 4px;
+}
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+
+.control input:checked ~ .control__indicator {
+  background: var(--text-verde);
+}
+
+.control--checkbox .control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.control--checkbox input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+.control--checkbox .control__indicator:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--text-color);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.forgot-pass {
+  font-size: 14px;
+  color: #3b96f7;
+  margin-left: 100px; /* Aumenta la separación hasta el fondo derecho */
+  margin-right: 0; /* Asegura que se ubique hasta el fondo del renglón */
+}
+
+.forgot-pass:hover {
+  color: var(--text-verde);
+}
+
+.text-muted {
+  color: var(--text-color) !important; /* Asegura que el texto de información sea blanco */
+  text-align: center; /* Centra el texto */
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.error-message.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .vector-login {
+    display: none;
+  }
+  .contents {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .formulario {
+    width: 100%;
+    padding: 1rem;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .btn {
+    width: 100%;
+  }
+  .social-login {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-login a {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .vector-login {
+    display: block;
+  }
+  .contents {
+    width: 50%;
+  }
+}
