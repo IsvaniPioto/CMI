@@ -3,7 +3,6 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f0f2f5; /* Ajusta el fondo para que no sea tan blanco */
   background-image: url('/src/assets/images/Login/fondoLogin.jpg'); /* Aplica la imagen de fondo */
   background-size: cover;
   background-position: center;
@@ -11,24 +10,23 @@ body {
   overflow: hidden; /* Evita el scroll */
   height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
   margin: 0; /* Elimina el margen por defecto */
-  color: #fff; /* Asegura que todas las letras sean blancas */
 }
 
 p {
-  color: var(--text-muted-color);
+  color: var(--blanco-color);
   font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Roboto", sans-serif;
-  color: var(--text-color);
+  color: var(--blanco-color);
 }
 
 a {
   transition: .3s all ease;
   text-decoration: underline; /* Se aplica a todos los enlaces */
-  color: var(--text-color);
+  color: var(--blanco-color);
 }
 
 a:hover {
@@ -86,20 +84,20 @@ h2 {
   top: -15px; /* Ajustado para más espacio */
   left: 10px;
   font-size: 14px;
-  color: #000000; /* Color blanco para las letras del label */
+  color: var(--negro-color); /* Color negro para las letras del label */
   padding: 0 5px;
   background: rgb(255, 254, 254); /* Fondo semitransparente */
   border-radius: 4px 14px 4px 14px; /* Añade border-radius */
   transition: .3s all ease;
   font-weight: 500; /* Peso de fuente ligeramente más fuerte */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01); /* Sombra sutil para profundidad */
 }
 
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label {
   top: -25px; /* Mueve la etiqueta hacia arriba cuando el input está enfocado */
   font-size: 12px; /* Reduce el tamaño de la fuente al enfocarse */
-  color: var(--text-color); /* Color blanco al enfocarse */
+  color: var(--negro-color); /* Color negro al enfocarse */
   background: rgba(255, 255, 255, 0.2); /* Mantiene el fondo semitransparente */
 }
 
@@ -111,7 +109,7 @@ h2 {
   background: transparent;
   border-bottom: 1px solid #ccc;
   padding: 10px;
-  color: var(--text-color); /* Color blanco para el texto del input */
+  color: var(--blanco-color); /* Color blanco para el texto del input */
 }
 
 .form-group.first {
@@ -136,7 +134,7 @@ h2 {
   height: 44px;
   background: #f7f7f7;
   border: 1px solid #dcdcdc;
-  color: var(--text-color); /* Color blanco para el texto del input */
+  color: var(--blanco-color); /* Color blanco para el texto del input */
 }
 
 .form-control:focus {
@@ -147,12 +145,12 @@ h2 {
 
 .btn-primary {
   background: var(--primary-color);
-  border-color: var(--secondary-color);
+  border-color: var(--negro-color);
 }
 
 .btn-primary:hover {
-  background: var(--text-verde) ;
-  border-color: var(--secondary-color);
+  background: var(--text-verde);
+  border-color: var(--negro-color);
 }
 
 .social-login {
@@ -177,7 +175,7 @@ h2 {
 .social-login a:hover {
   background: var(--primary-color);
   border-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--blanco-color);
 }
 
 .control {
@@ -229,7 +227,7 @@ h2 {
   top: 1px;
   width: 5px;
   height: 10px;
-  border: solid var(--text-color);
+  border: solid var(--blanco-color);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -246,7 +244,7 @@ h2 {
 }
 
 .text-muted {
-  color: var(--text-color) !important; /* Asegura que el texto de información sea blanco */
+  color: var(--blanco-color) !important; /* Asegura que el texto de información sea blanco */
   text-align: center; /* Centra el texto */
 }
 
@@ -264,6 +262,14 @@ h2 {
   to {
     visibility: hidden;
   }
+}
+
+h3 {
+  color: var(--blanco-color); /* Color blanco para Nourish */
+}
+
+.caption {
+  color: var(--blanco-color); /* Color blanco para Recordar usuario */
 }
 
 @media (max-width: 768px) {

@@ -1,7 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -80,13 +82,15 @@ const Login = () => {
                   </div>
                   <div className="d-flex mb-4 align-items-center">
                     <label className="control control--checkbox mb-0">
-                      <span className="caption">Recordar usuario</span>
+                      <span className="caption" style={{ color: 'var(--blanco-color)' }}>Recordar usuario</span>
                       <input
                         type="checkbox"
                       />
                       <div className="control__indicator"></div>
                     </label>
-                    <span className="ml-auto"><a href="#" className="forgot-pass">Recuperar contraseña</a></span>
+                    <span className="ml-auto">
+                      <Link to="/recovery-password" className="forgot-pass">Recuperar contraseña</Link>
+                    </span>
                   </div>
                   <input type="submit" value="Acceder" className="btn text-white btn-block btn-primary mb-2" />
                   <span className="d-block text-center my-2 text-muted"> Información en:</span>
