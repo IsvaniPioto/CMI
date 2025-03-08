@@ -52,7 +52,7 @@ const Login = () => {
             <div className="row justify-content-center">
               <div className="col-md-8">
                 <div className="mb-4">
-                  <h3><strong>Empresa de Sistemas Automatizados</strong></h3>
+                  <h3><strong>Nourish</strong></h3>
                   <p className="mb-4">Panel de Control del Ministerio de la Industria Alimentaria (MINAL).</p>
                 </div>
                 <form onSubmit={handleSubmit} className="formulario" noValidate>
@@ -88,7 +88,7 @@ const Login = () => {
                     </label>
                     <span className="ml-auto"><a href="#" className="forgot-pass">Recuperar contraseña</a></span>
                   </div>
-                  <input type="submit" value="Entrar" className="btn text-white btn-block btn-primary mb-2" />
+                  <input type="submit" value="Acceder" className="btn text-white btn-block btn-primary mb-2" />
                   <span className="d-block text-center my-2 text-muted"> Información en:</span>
                   <div className="social-login d-flex justify-content-center">
                     <a href="#" className="facebook mx-2">

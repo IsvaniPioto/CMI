@@ -1,16 +1,17 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Login/Login';
+import Login from './components/auth/Login/Login';
+import Home from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/auth/Login/Login.css';
 
 const App = () => {
   return (
     <Router>
-      <div className="app-container d-flex">
-        <div className="content-container flex-grow-1 d-flex justify-content-center align-items-center">
-          <Routes>
-            <Route path="/" element={<Login />} />
-          </Routes>
-        </div>
+      <div className="app-container d-flex flex-column" style={{ height: '100vh' }}>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
       </div>
     </Router>
   );
