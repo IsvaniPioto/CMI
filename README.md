@@ -1,2 +1,2 @@
-# CMI
+# Nourish
 Cuadro de Mando Integral
