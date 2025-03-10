@@ -3,7 +3,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url('/src/assets/images/Login/fondoLogin.jpg'); /* Aplica la imagen de fondo */
+  background-image: url('https://th.bing.com/th/id/OIP.-ytmJR3lyKze7EJtW34tKgHaDS?w=1920&h=853&rs=1&pid=ImgDetMain'); /* Aplica la imagen de fondo */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6,
   color: var(--blanco-color);
 }
 
+h3.login-title {
+  margin-top: 10px;
+}
+
 a {
   transition: .3s all ease;
   text-decoration: underline; /* Se aplica a todos los enlaces */
@@ -38,7 +42,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%; /* Asegura que el contenido ocupe toda la altura del contenedor */
+  height: calc(100vh - 4rem); /* Ajustar la altura teniendo en cuenta el footer */
 }
 
 .vector-login {
@@ -160,22 +164,26 @@ h2 {
 
 .social-login a {
   display: inline-block;
-  width: 48px;
-  height: 48px;
-  background: #f7f7f7;
-  border: 1px solid #dcdcdc;
-  border-radius: 50%;
+  width: auto;
+  height: auto;
+  border: none;
+  background: none;
   text-align: center;
-  line-height: 48px;
+  line-height: normal;
   color: #333;
   font-size: 16px;
-  transition: background .3s, border-color .3s;
+  transition: transform .3s, border-color .3s; /* Añadir transición para el agrandamiento */
+  overflow: hidden; /* Asegura que los iconos no se salgan del contenedor */
+}
+
+.social-login a img.icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain; /* Ajusta los iconos para que se ajusten completamente al contenedor */
 }
 
 .social-login a:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-  color: var(--blanco-color);
+  transform: scale(1.1); /* Agrandar un poquito al pasar el ratón */
 }
 
 .control {
@@ -235,8 +243,6 @@ h2 {
 .forgot-pass {
   font-size: 14px;
   color: #3b96f7;
-  margin-left: 100px; /* Aumenta la separación hasta el fondo derecho */
-  margin-right: 0; /* Asegura que se ubique hasta el fondo del renglón */
 }
 
 .forgot-pass:hover {
@@ -270,6 +276,14 @@ h3 {
 
 .caption {
   color: var(--blanco-color); /* Color blanco para Recordar usuario */
+}
+
+.d-flex.justify-content-between .forgot-pass-container {
+  margin-left: auto; /* Alinear a la derecha */
+}
+
+.d-flex.justify-content-between .control--checkbox {
+  margin-right: auto; /* Alinear a la izquierda */
 }
 
 @media (max-width: 768px) {

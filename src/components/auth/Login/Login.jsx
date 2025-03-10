@@ -3,7 +3,7 @@ import './Login.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import Footer from '../../Footer/Footer'; // Importar el componente Footer
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -44,74 +44,77 @@ const Login = () => {
   };
 
   return (
-    <div className="login-content d-flex align-items-center justify-content-center">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-6 d-none d-lg-block">
-            <img src="/src/assets/images/Login/vectorLogin.svg" alt="Image" className="img-fluid vector-login" />
-          </div>
-          <div className="col-lg-6 col-md-12 contents">
-            <div className="row justify-content-center">
-              <div className="col-md-8">
-                <div className="mb-4">
-                  <h3><strong>Nourish</strong></h3>
-                  <p className="mb-4">Panel de Control del Ministerio de la Industria Alimentaria (MINAL).</p>
-                </div>
-                <form onSubmit={handleSubmit} className="formulario" noValidate>
-                  <div className="form-group first">
-                    <label htmlFor="username">Usuario</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="username"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                    />
-                    {usernameError && <div className="error-message">{usernameError}</div>}
+    <>
+      <div className="login-content d-flex align-items-center justify-content-center">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6 d-none d-lg-block">
+              <img src="/src/assets/images/Login/vectorLogin.svg" alt="Image" className="img-fluid vector-login" />
+            </div>
+            <div className="col-lg-6 col-md-12 contents">
+              <div className="row justify-content-center">
+                <div className="col-md-8">
+                  <div className="mb-4">
+                    <h3 className="login-title"><strong>Nourish</strong></h3>
+                    <p className="mb-4">Panel de Control del Ministerio de la Industria Alimentaria (MINAL).</p>
                   </div>
-                  <div className="form-group last mb-3">
-                    <label htmlFor="password">Contraseña</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                    {passwordError && <div className="error-message">{passwordError}</div>}
-                  </div>
-                  <div className="d-flex mb-4 align-items-center">
-                    <label className="control control--checkbox mb-0">
-                      <span className="caption" style={{ color: 'var(--blanco-color)' }}>Recordar usuario</span>
+                  <form onSubmit={handleSubmit} className="formulario" noValidate>
+                    <div className="form-group first">
+                      <label htmlFor="username">Usuario</label>
                       <input
-                        type="checkbox"
+                        type="text"
+                        className="form-control"
+                        id="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
                       />
-                      <div className="control__indicator"></div>
-                    </label>
-                    <span className="ml-auto">
-                      <Link to="/recovery-password" className="forgot-pass">Recuperar contraseña</Link>
-                    </span>
-                  </div>
-                  <input type="submit" value="Acceder" className="btn text-white btn-block btn-primary mb-2" />
-                  <span className="d-block text-center my-2 text-muted"> Información en:</span>
-                  <div className="social-login d-flex justify-content-center">
-                    <a href="#" className="facebook mx-2">
-                      <span className="icon-facebook mr-3"></span>
-                    </a>
-                    <a href="#" className="twitter mx-2">
-                      <span className="icon-twitter mr-3"></span>
-                    </a>
-                    <a href="#" className="google mx-2">
-                      <span className="icon-google mr-3"></span>
-                    </a>
-                  </div>
-                </form>
+                      {usernameError && <div className="error-message">{usernameError}</div>}
+                    </div>
+                    <div className="form-group last mb-3">
+                      <label htmlFor="password">Contraseña</label>
+                      <input
+                        type="password"
+                        className="form-control"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                      />
+                      {passwordError && <div className="error-message">{passwordError}</div>}
+                    </div>
+                    <div className="d-flex mb-4 align-items-center justify-content-between">
+                      <label className="control control--checkbox mb-0">
+                        <span className="caption">Recordar usuario</span>
+                        <input
+                          type="checkbox"
+                        />
+                        <div className="control__indicator"></div>
+                      </label>
+                      <span className="forgot-pass-container">
+                        <Link to="/recovery-password" className="forgot-pass">Recuperar contraseña</Link>
+                      </span>
+                    </div>
+                    <input type="submit" value="Acceder" className="btn text-white btn-block btn-primary mb-2" />
+                    <span className="d-block text-center my-2 text-muted"> Información en:</span>
+                    <div className="social-login d-flex justify-content-center">
+                      <a href="#" className="facebook mx-2">
+                        <img src="/src/assets/images/Icons/facebook-logo.png" alt="Facebook" className="icon" />
+                      </a>
+                      <a href="#" className="twitter mx-2">
+                        <img src="/src/assets/images/Icons/x.png" alt="X" className="icon" />
+                      </a>
+                      <a href="#" className="google mx-2">
+                        <img src="/src/assets/images/Icons/whatsapp.png" alt="Whatsapp" className="icon" />
+                      </a>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <Footer /> {/* Agregar el componente Footer */}
+    </>
   );
 }
 

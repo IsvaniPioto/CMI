@@ -4,6 +4,7 @@ import Home from './pages/home/Home';
 import RecoveryPassword from './components/auth/RecoveryPassword/RecoveryPassword';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/auth/Login/Login.css';
+import CreateUser from './components/Admin/CreateUser';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/recovery-password" element={<RecoveryPassword />} />
+          <Route path="/create-user" element={<CreateUser />} />
         </Routes>
       </div>
     </Router>
