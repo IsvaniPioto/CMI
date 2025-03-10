@@ -1,16 +1,16 @@
 @import '../../index.css';
 
-.create-user-container {
+.createCompanyContainer {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.form-title {
+.formTitle {
   text-align: center;
   color: var(--primary-color);
 }
 
-.form-control-sm {
+.formControlSm {
   margin-bottom: 10px;
 }
 
@@ -21,18 +21,19 @@
 }
 
 .btn {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-.create-user-content {
+.createCompanyContent {
   padding: 5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+  overflow-y: auto; /* Permitir el scroll vertical */
 }
 
-.create-user-form {
+.createCompanyForm {
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0); /* Hacer el fondo del formulario completamente transparente */
   border-radius: 8px;
@@ -42,47 +43,48 @@
   margin-top: 0; /* Mover el formulario más arriba */
 }
 
-.create-user-form h3 {
+.createCompanyForm h3 {
   margin-bottom: 0.5rem; /* Reducir aún más el margen inferior */
   margin-top: 0; /* Eliminar el margen superior */
 }
 
-.form-group {
+.formGroup {
   margin-bottom: 1.5rem;
 }
 
-.create-user-form .form-row .form-group {
+.createCompanyForm .formRow .formGroup {
   flex: 0 0 32%; /* Ajustar el ancho de los grupos de formulario */
   max-width: 32%;
   margin-right: 2%;
 }
 
-.create-user-form .form-row .form-group:last-child {
+.createCompanyForm .formRow .formGroup:last-child {
   margin-right: 0;
 }
 
-.btn-primary {
-  background-color: blue; /* Cambiar el color de fondo a azul */
-  border-color: blue; /* Cambiar el color del borde a azul */
+.btnPrimary {
+  background-color: var(--primary-color);
+  border-color: var(--negro-color);
 }
 
-.btn-primary:hover {
+.btnPrimary:hover {
   background-color: var(--text-verde);
-  border-color: var(--text-verde);
+  border-color: var(--negro-color);
 }
 
-.main-content {
+.mainContent {
   margin-left: 250px; /* Ajustar el margen izquierdo para el sidebar */
   padding: 1rem;
+  overflow-y: auto; /* Permitir el scroll vertical */
 }
 
-h3.text-center {
+h3TextCenter {
   text-align: center;
   margin-bottom: 0.5rem; /* Reducir aún más el margen inferior */
   margin-top: 0; /* Eliminar el margen superior */
 }
 
-.form-container {
+.formContainer {
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Alinear el formulario más arriba */
@@ -97,31 +99,29 @@ h3.text-center {
   border-radius: 8px;
 }
 
-.form-row {
+.formRow {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 
-.form-group label {
+.formGroup label {
   display: block;
   margin-bottom: 0.5rem;
 }
 
-.form-group input {
+.formGroup input {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.btn-primary {
+.btnPrimary {
   display: block;
   width: 100%;
   padding: 0.75rem;
-  background-color: var(--primary-color);
   border: none;
-  color: var(--blanco-color);
   font-size: 1rem;
   cursor: pointer;
   border-radius: 4px;
@@ -129,13 +129,13 @@ h3.text-center {
 }
 
 @media (max-width: 992px) {
-  .create-user-form .form-row .form-group {
+  .createCompanyForm .formRow .formGroup {
     flex: 0 0 48%; /* Ajustar el ancho de los grupos de formulario a 2 por fila */
     max-width: 48%;
     margin-right: 4%;
   }
 
-  .create-user-form .form-row .form-group:last-child {
+  .createCompanyForm .formRow .formGroup:last-child {
     margin-right: 0;
   }
 }

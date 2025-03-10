@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Login.css';
+import styles from './Login.module.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -45,57 +45,57 @@ const Login = () => {
 
   return (
     <>
-      <div className="login-content d-flex align-items-center justify-content-center">
+      <div className={styles.loginContent}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 d-none d-lg-block">
-              <img src="/src/assets/images/Login/vectorLogin.svg" alt="Image" className="img-fluid vector-login" />
+              <img src="/src/assets/images/Login/vectorLogin.svg" alt="Image" className={`img-fluid ${styles.vectorLogin}`} />
             </div>
             <div className="col-lg-6 col-md-12 contents">
               <div className="row justify-content-center">
                 <div className="col-md-8">
                   <div className="mb-4">
-                    <h3 className="login-title"><strong>Nourish</strong></h3>
+                    <h3 className={styles.loginTitle}><strong>Nourish</strong></h3>
                     <p className="mb-4">Panel de Control del Ministerio de la Industria Alimentaria (MINAL).</p>
                   </div>
-                  <form onSubmit={handleSubmit} className="formulario" noValidate>
-                    <div className="form-group first">
+                  <form onSubmit={handleSubmit} className={styles.formulario} noValidate>
+                    <div className={`form-group first ${styles.formGroup}`}>
                       <label htmlFor="username">Usuario</label>
                       <input
                         type="text"
-                        className="form-control"
+                        className={`form-control ${styles.formControl}`}
                         id="username"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                       />
-                      {usernameError && <div className="error-message">{usernameError}</div>}
+                      {usernameError && <div className={styles.errorMessage}>{usernameError}</div>}
                     </div>
-                    <div className="form-group last mb-3">
+                    <div className={`form-group last mb-3 ${styles.formGroup}`}>
                       <label htmlFor="password">Contraseña</label>
                       <input
                         type="password"
-                        className="form-control"
+                        className={`form-control ${styles.formControl}`}
                         id="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                       />
-                      {passwordError && <div className="error-message">{passwordError}</div>}
+                      {passwordError && <div className={styles.errorMessage}>{passwordError}</div>}
                     </div>
-                    <div className="d-flex mb-4 align-items-center justify-content-between">
-                      <label className="control control--checkbox mb-0">
-                        <span className="caption">Recordar usuario</span>
+                    <div className={`d-flex mb-4 align-items-center justify-content-between ${styles.dFlex} ${styles.justifyContentBetween}`}>
+                      <label className={`control control--checkbox mb-0 ${styles.control} ${styles.controlCheckbox}`}>
+                        <span className={styles.caption}>Recordar usuario</span>
                         <input
                           type="checkbox"
                         />
-                        <div className="control__indicator"></div>
+                        <div className={styles.controlIndicator}></div>
                       </label>
-                      <span className="forgot-pass-container">
-                        <Link to="/recovery-password" className="forgot-pass">Recuperar contraseña</Link>
+                      <span className={styles.forgotPassContainer}>
+                        <Link to="/recovery-password" className={styles.forgotPass}>Recuperar contraseña</Link>
                       </span>
                     </div>
-                    <input type="submit" value="Acceder" className="btn text-white btn-block btn-primary mb-2" />
-                    <span className="d-block text-center my-2 text-muted"> Información en:</span>
-                    <div className="social-login d-flex justify-content-center">
+                    <input type="submit" value="Acceder" className={`btn text-white btn-block ${styles.btnPrimary} mb-2`} />
+                    <span className={`d-block text-center my-2 ${styles.textMuted}`}> Información en:</span>
+                    <div className={`social-login d-flex justify-content-center ${styles.socialLogin}`}>
                       <a href="#" className="facebook mx-2">
                         <img src="/src/assets/images/Icons/facebook-logo.png" alt="Facebook" className="icon" />
                       </a>

@@ -1,0 +1,16 @@
+@import '../../index.css';
+
+.homeContainer {
+  text-align: center;
+  padding: 2rem;
+}
+
+.homeContainer h1 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.homeContainer p {
+  color: var(--negro-color);
+  font-size: 1.2rem;
+}

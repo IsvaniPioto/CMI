@@ -1,9 +1,9 @@
-import './Sidebar.css';
+import styles from './Sidebar.module.css';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className={styles.sidebar}>
       <h2>Menú</h2>
       <ul>
         <li><Link to="/">Inicio</Link></li>

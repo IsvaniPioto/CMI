@@ -1,8 +1,8 @@
-import './Footer.css';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
       <p>&copy; {new Date().getFullYear()} Alimatic. Todos los derechos reservados.</p>
     </footer>
   );

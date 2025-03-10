@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6,
   color: var(--blanco-color);
 }
 
-h3.login-title {
+h3.loginTitle {
   margin-top: 10px;
 }
 
@@ -37,7 +37,7 @@ a:hover {
   text-decoration: none !important;
 }
 
-.login-content {
+.loginContent {
   padding: 5rem 0; /* Reduce el padding */
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@ a:hover {
   height: calc(100vh - 4rem); /* Ajustar la altura teniendo en cuenta el footer */
 }
 
-.vector-login {
+.vectorLogin {
   margin-top: 0%; /* Ajusta la posición de la imagen */
 }
 
@@ -78,12 +78,12 @@ h2 {
   padding: 1rem 0; /* Reduce el padding del formulario */
 }
 
-.form-group {
+.formGroup {
   position: relative;
   margin-bottom: 1.5rem;
 }
 
-.form-group label {
+.formGroup label {
   position: absolute;
   top: -15px; /* Ajustado para más espacio */
   left: 10px;
@@ -97,40 +97,40 @@ h2 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01); /* Sombra sutil para profundidad */
 }
 
-.form-group input:focus + label,
-.form-group input:not(:placeholder-shown) + label {
+.formGroup input:focus + label,
+.formGroup input:not(:placeholder-shown) + label {
   top: -25px; /* Mueve la etiqueta hacia arriba cuando el input está enfocado */
   font-size: 12px; /* Reduce el tamaño de la fuente al enfocarse */
   color: var(--negro-color); /* Color negro al enfocarse */
   background: rgba(255, 255, 255, 0.2); /* Mantiene el fondo semitransparente */
 }
 
-.form-group input:focus + label {
+.formGroup input:focus + label {
   background: rgba(255, 255, 255, 0.2); /* Cambia el color de fondo cuando se hace clic en el label */
 }
 
-.form-group input {
+.formGroup input {
   background: transparent;
   border-bottom: 1px solid #ccc;
   padding: 10px;
   color: var(--blanco-color); /* Color blanco para el texto del input */
 }
 
-.form-group.first {
+.formGroup.first {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
 }
 
-.form-group.last {
+.formGroup.last {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
 
-.form-group.focus {
+.formGroup.focus {
   background: #fff;
 }
 
-.form-control {
+.formControl {
   border: none;
   padding: 0;
   font-size: 20px;
@@ -141,28 +141,28 @@ h2 {
   color: var(--blanco-color); /* Color blanco para el texto del input */
 }
 
-.form-control:focus {
+.formControl:focus {
   outline: none;
   box-shadow: none;
   border-color: var(--primary-color);
 }
 
-.btn-primary {
+.btnPrimary {
   background: var(--primary-color);
   border-color: var(--negro-color);
 }
 
-.btn-primary:hover {
+.btnPrimary:hover {
   background: var(--text-verde);
   border-color: var(--negro-color);
 }
 
-.social-login {
+.socialLogin {
   display: flex;
   justify-content: space-between;
 }
 
-.social-login a {
+.socialLogin a {
   display: inline-block;
   width: auto;
   height: auto;
@@ -176,13 +176,13 @@ h2 {
   overflow: hidden; /* Asegura que los iconos no se salgan del contenedor */
 }
 
-.social-login a img.icon {
+.socialLogin a img.icon {
   width: 48px;
   height: 48px;
   object-fit: contain; /* Ajusta los iconos para que se ajusten completamente al contenedor */
 }
 
-.social-login a:hover {
+.socialLogin a:hover {
   transform: scale(1.1); /* Agrandar un poquito al pasar el ratón */
 }
 
@@ -201,7 +201,7 @@ h2 {
   opacity: 0;
 }
 
-.control__indicator {
+.controlIndicator {
   position: absolute;
   top: 2px;
   left: 0;
@@ -211,26 +211,26 @@ h2 {
   border-radius: 4px;
 }
 
-.control:hover input ~ .control__indicator,
-.control input:focus ~ .control__indicator {
+.control:hover input ~ .controlIndicator,
+.control input:focus ~ .controlIndicator {
   background: #ccc;
 }
 
-.control input:checked ~ .control__indicator {
+.control input:checked ~ .controlIndicator {
   background: var(--text-verde);
 }
 
-.control--checkbox .control__indicator:after {
+.controlCheckbox .controlIndicator:after {
   content: '';
   position: absolute;
   display: none;
 }
 
-.control--checkbox input:checked ~ .control__indicator:after {
+.controlCheckbox input:checked ~ .controlIndicator:after {
   display: block;
 }
 
-.control--checkbox .control__indicator:after {
+.controlCheckbox .controlIndicator:after {
   left: 5px;
   top: 1px;
   width: 5px;
@@ -240,27 +240,27 @@ h2 {
   transform: rotate(45deg);
 }
 
-.forgot-pass {
+.forgotPass {
   font-size: 14px;
   color: #3b96f7;
 }
 
-.forgot-pass:hover {
+.forgotPass:hover {
   color: var(--text-verde);
 }
 
-.text-muted {
+.textMuted {
   color: var(--blanco-color) !important; /* Asegura que el texto de información sea blanco */
   text-align: center; /* Centra el texto */
 }
 
-.error-message {
+.errorMessage {
   color: var(--error-color);
   font-size: 12px;
   margin-top: 5px;
 }
 
-.error-message.blink {
+.errorMessage.blink {
   animation: blink-animation 1s steps(5, start) infinite;
 }
 
@@ -278,16 +278,16 @@ h3 {
   color: var(--blanco-color); /* Color blanco para Recordar usuario */
 }
 
-.d-flex.justify-content-between .forgot-pass-container {
+.dFlex.justifyContentBetween .forgotPassContainer {
   margin-left: auto; /* Alinear a la derecha */
 }
 
-.d-flex.justify-content-between .control--checkbox {
+.dFlex.justifyContentBetween .controlCheckbox {
   margin-right: auto; /* Alinear a la izquierda */
 }
 
 @media (max-width: 768px) {
-  .vector-login {
+  .vectorLogin {
     display: none;
   }
   .contents {
@@ -299,23 +299,23 @@ h3 {
     width: 100%;
     padding: 1rem;
   }
-  .form-group {
+  .formGroup {
     margin-bottom: 1rem;
   }
   .btn {
     width: 100%;
   }
-  .social-login {
+  .socialLogin {
     flex-direction: column;
     align-items: center;
   }
-  .social-login a {
+  .socialLogin a {
     margin-bottom: 0.5rem;
   }
 }
 
 @media (min-width: 769px) {
-  .vector-login {
+  .vectorLogin {
     display: block;
   }
   .contents {
